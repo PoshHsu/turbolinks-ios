@@ -16,7 +16,7 @@ public extension SessionDelegate {
     }
 
     func session(_ session: Session, openExternalURL URL: Foundation.URL) {
-        UIApplication.shared.openURL(URL)
+        UIApplication.shared.open(URL, options: [:], completionHandler: nil)
     }
 
     func sessionDidStartRequest(_ session: Session) {

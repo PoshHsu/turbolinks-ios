@@ -183,7 +183,7 @@ class ColdBootVisit: Visit, WKNavigationDelegate, WebViewPageLoadDelegate {
         if navigationAction.navigationType == .linkActivated {
             decisionHandler(.cancel)
             if let URL = navigationAction.request.url {
-                UIApplication.shared.openURL(URL)
+                UIApplication.shared.open(URL, options: [:], completionHandler: nil)
             }
         } else {
             decisionHandler(.allow)
